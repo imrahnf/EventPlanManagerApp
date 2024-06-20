@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventPlanManagerApp.MainPage">
+
+    <ScrollView>
+        <Grid Margin="10"
+              RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*"
+              ColumnDefinitions="*,*"
+              ColumnSpacing="5"
+              RowSpacing="5">
+
+        <!--The Title Label--> 
+        <Label
+            TextColor="DarkBlue"
+            Text="Event Planner"/>
+
+
+        <!--The Controls for Data Input--> 
+        <Label 
+            Grid.Row="1" 
+            Grid.Column="0"
+            TextColor="DarkBlue"
+            Text="Event Plan Id"/>
+        <Entry 
+            x:Name="EventPlanIdEntry" 
+            Grid.Row="2" 
+            Grid.Column="0" 
+            Placeholder="E.g. 1001"/>
+
+        <Label 
+            Grid.Row="3" 
+            Grid.Column="0" 
+            TextColor="DarkBlue"
+            Text="Event Name"/>
+        <Entry 
+            x:Name="EventNameEntry" 
+            Grid.Row="4" 
+            Grid.Column="0" 
+            Placeholder="e.g. Product Launch"/>
+
+        <Label 
+            Grid.Row="5" 
+            Grid.Column="0" 
+            TextColor="DarkBlue"
+            Text="Start Date"/>
+        <DatePicker 
+            x:Name="StartDatePicker" 
+            Grid.Row="6" 
+            Grid.Column="0"/>
+
+        <Label
+            Grid.Row="7" 
+            Grid.Column="0"
+            TextColor="DarkBlue"
+            Text="Event Type"/>
+        <Picker 
+            Grid.Row="8" 
+            Grid.Column="0"
+            x:Name="EventTypePicker"/>
+
+        <Label 
+            Grid.Row="9" 
+            Grid.Column="0" 
+            TextColor="DarkBlue"
+            Text="Budget"/>
+        <Entry 
+            x:Name="BudgetEntry" 
+            Grid.Row="10" 
+            Grid.Column="0" 
+            Placeholder="e.g. 10000.00"/>
+
+        <Label 
+            Grid.Row="11" 
+            Grid.Column="0" 
+            TextColor="DarkBlue"
+            Text="Estimated Cost"/>
+        <Entry 
+            x:Name="EstimatedCostEntry" 
+            Grid.Row="12" 
+            Grid.Column="0"
+            Placeholder="e.g. 9500.00"/>
+
+
+        <!--The Action buttons-->
+        <HorizontalStackLayout 
+            Grid.Row="13" 
+            Grid.Column="0" 
+            Spacing="10">
+            <Button 
+                x:Name="AddButton" 
+                BackgroundColor="DarkBlue"
+                FontSize="Small"
+                Text="Add"/>
+            <Button 
+                x:Name="ListUpcomingButton"
+                BackgroundColor="DarkBlue"
+                FontSize="Small"
+                Text="Upcoming"/>
+        </HorizontalStackLayout>
+
+
+        <!-- The ListView for Event Plan Details-->
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalOptions="End"
+            TextColor="DarkBlue"
+            FontSize="Small"
+            Text="Event Details"
+            />
+        <ListView
+            x:Name="EventsListView"
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="AliceBlue"/>
+
+
+        <!-- The Report Labels-->
+        <Grid
+            Grid.Row="13"
+            Grid.Column="1"
+            RowDefinitions="*,*"
+            ColumnDefinitions="*,*,*"
+            HorizontalOptions="Fill">
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Current"
+                TextColor="DarkBlue"
+                FontSize="Small"
+                VerticalOptions="Center"
+            />
+            <Image
+                Grid.Row="0"
+                Grid.Column="2"
+                x:Name="EventTypeImage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="AliceBlue"                
+                MaximumWidthRequest="100"
+                />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Summary"
+                TextColor="DarkBlue"
+                FontSize="Small"
+                VerticalOptions="Center"
+            />
+        </Grid>
+    </Grid>
+
+    </ScrollView>
+
+</ContentPage>
+
