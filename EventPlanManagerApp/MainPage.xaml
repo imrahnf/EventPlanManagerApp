@@ -13,7 +13,7 @@
         <!--The Title Label--> 
         <Label
             TextColor="DarkBlue"
-            Text="Event Planner"/>
+            Text="Event Plan Manager - Omrahn Faqiri"/>
 
 
         <!--The Controls for Data Input--> 

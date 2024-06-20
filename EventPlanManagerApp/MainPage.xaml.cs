@@ -1,8 +1,12 @@
-﻿namespace EventPlanManagerApp;
+﻿using EventPlanManagerApp.BusinessLogic;
+
+namespace EventPlanManagerApp;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+	EventPlanManager eventPlanManager = new EventPlanManager();
+
+    public MainPage()
 	{
 		InitializeComponent();
 	}
