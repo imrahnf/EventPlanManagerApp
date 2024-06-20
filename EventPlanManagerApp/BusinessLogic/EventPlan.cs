@@ -28,6 +28,11 @@ namespace EventPlanManagerApp.BusinessLogic
     }
 		}
 
+		public int EventPlanId
+		{
+			get { return _eventPlanId;  }
+		}
+
         public override string ToString()
         {
             return _eventType.ToString();
